@@ -8,41 +8,41 @@
     </mt-swipe>
     <ul class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
-          <span class="mui-icon mui-icon-home"></span>
-          <div class="mui-media-body">Home</div>
-        </a>
+        <router-link to="/home/newlist">
+          <span class="mui-icon "> <img src="../../images/menu1.png" alt="" /></span>
+          <div class="mui-media-body">新闻资讯</div>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
-          <span class="mui-icon mui-icon-email">
-            <span class="mui-badge">5</span>
+          <span class="mui-icon ">
+           <img src="../../images/menu2.png" alt="" />
           </span>
-          <div class="mui-media-body">Email</div>
+          <div class="mui-media-body">图片分享</div>
         </a>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
-          <span class="mui-icon mui-icon-chatbubble"></span>
-          <div class="mui-media-body">Chat</div>
+          <span class="mui-icon "><img src="../../images/menu3.png" alt="" /></span>
+          <div class="mui-media-body">商品购买</div>
         </a>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
-          <span class="mui-icon mui-icon-location"></span>
-          <div class="mui-media-body">location</div>
+          <span class="mui-icon "><img src="../../images/menu4.png" alt="" /></span>
+          <div class="mui-media-body">留言反馈</div>
         </a>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
-          <span class="mui-icon mui-icon-search"></span>
-          <div class="mui-media-body">Search</div>
+          <span class="mui-icon "><img src="../../images/menu5.png" alt="" /></span>
+          <div class="mui-media-body">视屏专区</div>
         </a>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
-          <span class="mui-icon mui-icon-phone"></span>
-          <div class="mui-media-body">Phone</div>
+          <span class="mui-icon "><img src="../../images/menu6.png" alt="" /></span>
+          <div class="mui-media-body">联系我们</div>
         </a>
       </li>
     </ul>
@@ -63,7 +63,7 @@ export default {
   methods: {
     getlunbo() {
       this.$http
-        .get("http://www.liulongbin.top:3005/api/getlunbo")
+        .get("api/getlunbo")
         .then(result => {
           if (result.body.status === 0) {
             this.lunbotulist = result.body.message;
@@ -79,9 +79,15 @@ export default {
 <style lang="css" scoped>
 .mint-swipe {
   height: 200px;
+
 }
-img {
+.mint-swipe img {
   width: 100%;
   height: 100%;
 }
+.mui-icon img{
+  width: 60px;
+  height: 60px;
+}
+
 </style>

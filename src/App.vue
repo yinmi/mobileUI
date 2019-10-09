@@ -3,7 +3,10 @@
     <!--顶部-->
     <mt-header fixed title="黑马程序员"></mt-header>
     <!--中间-->
-    <router-view></router-view>
+	<transition>
+	 <router-view></router-view>
+	</transition>
+   
     <!--底部-->
    <nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item " to="/home">
@@ -35,7 +38,20 @@
 <style lang="css" scoped>
 .app-container{
   padding-top:40px;
-  background-color:none;
+  background-color:white;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+.v-enter{
+   opacity: 0;
+   transform: translateX(100%)
+}
+.v-leave{
+	 opacity: 0;
+   transform: translateX(-100%)
 }
 
+.v-enter-active,.v-leave-active{
+transition: all 0.6s ease
+}
 </style>
