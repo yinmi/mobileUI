@@ -5,7 +5,7 @@ import shopperContainers from './components/tabber/shopper.vue'
 import searchContainers from './components/tabber/Search.vue'
 import newList from './components/newlist/newlist.vue'
 import newsInfo from './components/newlist/newsInfo.vue'
-
+import photolist from './components/photos/photolist.vue'
 // 3. 创建路由对象
 var router = new VueRouter({
   routes: [
@@ -15,7 +15,9 @@ var router = new VueRouter({
    {path:'/shopper',component:shopperContainers},
    {path:'/search',component:searchContainers},
    {path:'/home/newlist',component:newList},
-   {path:'/home/newsinfo/:id',component:newsInfo}
+   {path:'/home/newsinfo/:id',component:newsInfo},
+   {path:'/home/photolist',component:photolist}
+
   ],
   linkActiveClass:'mui-active',
 })

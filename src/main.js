@@ -30,7 +30,7 @@ import './css/icons-extra.css'
 import app from './App.vue'
 
 Vue.http.options.root='http://www.liulongbin.top:3005/'
-
+Vue.http.options.emulateJSON=true;
 //时间插件
 import moment from 'moment'
 //全局过滤器

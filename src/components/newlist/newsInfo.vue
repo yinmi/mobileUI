@@ -34,7 +34,7 @@ export default {
   methods: {
     getNewsInfo(){
         this.$http.get('api/getnew/'+this.id).then(result=>{
-        console.log(result.body)
+        //console.log(result.body)
         if(result.body.status===0)
         this.content=result.body.message[0]
         else
