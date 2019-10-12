@@ -8,6 +8,7 @@ import newsInfo from './components/newlist/newsInfo.vue'
 import photolist from './components/photos/photolist.vue'
 import photoInfo from './components/photos/photoInfo.vue'
 import commodity from './components/commodity/commodityList.vue'
+import commodityInfo from './components/commodity/commodityInfo.vue'
 
 
 // 3. 创建路由对象
@@ -22,7 +23,8 @@ var router = new VueRouter({
    {path:'/home/newsinfo/:id',component:newsInfo},
    {path:'/home/photolist',component:photolist},
    {path:'/home/photoinfo/:photoid',component:photoInfo},
-   {path:'/home/commodity',component:commodity}
+   {path:'/home/commodity',component:commodity},
+   {path:'/home/commodityInfo/:goodsid',component:commodityInfo }
 
 
   ],
