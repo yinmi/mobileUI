@@ -9,6 +9,8 @@ import photolist from './components/photos/photolist.vue'
 import photoInfo from './components/photos/photoInfo.vue'
 import commodity from './components/commodity/commodityList.vue'
 import commodityInfo from './components/commodity/commodityInfo.vue'
+import commodityDes from './components/commodity/commodityDSC.vue'
+import commodityComment from './components/commodity/commodictComment.vue'
 
 
 // 3. 创建路由对象
@@ -24,8 +26,9 @@ var router = new VueRouter({
    {path:'/home/photolist',component:photolist},
    {path:'/home/photoinfo/:photoid',component:photoInfo},
    {path:'/home/commodity',component:commodity},
-   {path:'/home/commodityInfo/:goodsid',component:commodityInfo }
-
+   {path:'/home/commodityInfo/:goodsid',component:commodityInfo },
+   {path:'/home/commodityDes/:goodid',component:commodityDes,name:'commodictDsc'},
+   {path:'/home/commodityComment/:goodid',component:commodityComment,name:'commodictComment'}
 
   ],
   linkActiveClass:'mui-active',

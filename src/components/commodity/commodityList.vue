@@ -1,5 +1,6 @@
 <template>
  <div class="goods-list">
+  
      <router-link :to="'/home/commodityInfo/'+item.id" class="goods-item" v-for="(item ,index) in goodsList" :key="index">
        <img :src="item.img_url" alt="error">
        <h1 class="title">{{item.title}}</h1>
@@ -110,5 +111,6 @@ this.getGoodsList();
       
     }
 }
+
 
 </style>
